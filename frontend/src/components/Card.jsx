@@ -1,5 +1,3 @@
-import React from "react";
-
 const Card = ({ d, cardCounts }) => {
   const count = cardCounts[d.key];
   return (

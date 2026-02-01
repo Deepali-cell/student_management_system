@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import { StateContext } from "../context/stateContext";
 import axios from "axios";
+import StateContext from "../context/StateContext";
 
 const AddStudent = () => {
   const { students, setStudents, backend_url, getAllStudents } =

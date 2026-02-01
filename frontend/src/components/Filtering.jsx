@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { StateContext } from "../context/stateContext";
+import StateContext from "../context/StateContext";
 
 const Filtering = ({ setDisplayStudents }) => {
   const { students } = useContext(StateContext);

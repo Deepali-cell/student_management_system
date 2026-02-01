@@ -8,7 +8,7 @@ import { cardsData } from "../data/data";
 import Card from "./components/Card";
 import Modal from "./components/Modal";
 import { useContext } from "react";
-import { StateContext } from "./context/stateContext";
+import StateContext from "./context/StateContext";
 
 const App = () => {
   const [open, setOpen] = useState(false);

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { StateContext } from "../context/stateContext";
+import StateContext from "../context/StateContext";
 
 const Distribution = () => {
   const { counts, percent } = useContext(StateContext);

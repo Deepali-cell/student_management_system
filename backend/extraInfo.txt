@@ -1,0 +1,21 @@
+✅ Success
+
+200 OK → data mil gaya / request successful
+
+201 Created → naya data create hua
+
+204 No Content → delete success, response body nahi
+
+❌ Client Error
+
+400 Bad Request → frontend se galat data gaya
+
+401 Unauthorized → login/token missing
+
+403 Forbidden → access allowed nahi
+
+404 Not Found → API ya data nahi mila
+
+🔥 Server Error
+
+500 Internal Server Error → backend crash / bug

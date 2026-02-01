@@ -135,6 +135,7 @@ const StateContextProvider = ({ children }) => {
     backend_url,
     exactNoOfStudents,
     setExactNoOfStudents,
+    getAllStudents,
   };
 
   return (

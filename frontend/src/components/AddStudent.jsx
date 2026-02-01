@@ -34,7 +34,7 @@ const AddStudent = () => {
       const { data } = await axios.post(`${backend_url}/add`, form);
 
       if (data.success) {
-        setStudents([...students, form]);
+        setStudents([...students, data.newStudent]);
       } else {
         console.log(data.message || "Some error while adding student");
       }

@@ -23,7 +23,11 @@ const addStudent = async (req, res) => {
     }
     return res
       .status(201)
-      .json({ succes: true, message: "Student added successfully" });
+      .json({
+        succes: true,
+        message: "Student added successfully",
+        newStudent,
+      });
   } catch (error) {
     return res
       .status(500)

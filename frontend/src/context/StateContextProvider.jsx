@@ -100,25 +100,22 @@ const StateContextProvider = ({ children }) => {
     // localStorage.setItem("studentsData", JSON.stringify(updatedData));
   };
 
-  useEffect(() => {
-    const getAllStudents = async () => {
-      try {
-        const { data } = await axios.get(`${backend_url}/getstudents`, {
-          withCredentials: true,
-        });
-        if (data.success) {
-          setExactNoOfStudents(data.students.length);
-          setStudents(data.students);
-        } else {
-          console.log(
-            "some error while fetching the students : ",
-            data.message,
-          );
-        }
-      } catch (error) {
-        console.log("some error while fetching the students :", error.message);
+  const getAllStudents = async () => {
+    try {
+      const { data } = await axios.get(`${backend_url}/getstudents`, {
+        withCredentials: true,
+      });
+      if (data.success) {
+        setExactNoOfStudents(data.students.length);
+        setStudents(data.students);
+      } else {
+        console.log("some error while fetching the students : ", data.message);
       }
-    };
+    } catch (error) {
+      console.log("some error while fetching the students :", error.message);
+    }
+  };
+  useEffect(() => {
     getAllStudents();
   }, []);
   const value = {
